@@ -36,9 +36,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //contact page
  const popup = document.getElementById('popupMsg');
+const contactForm = document.getElementById('contactForm');
 
-document.getElementById('contactForm').addEventListener('submit', async (e) => {
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
+
+  const contactInput = contactForm.querySelector('input[name="contact"]');
+  const contactValue = contactInput.value.trim();
+
+  // ✅ Validate 10 digits
+  if (!/^\d{10}$/.test(contactValue)) {
+    contactInput.classList.add('error');
+    showPopup('Please enter a valid 10-digit contact number', 'error');
+    return;
+  } else {
+    contactInput.classList.remove('error');
+  }
 
   const formData = new FormData(e.target);
   const data = Object.fromEntries(formData);
@@ -70,5 +83,6 @@ function showPopup(message, type) {
     popup.style.display = 'none';
   }, 3000);
 }
+
 
 
