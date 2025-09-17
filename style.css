@@ -773,20 +773,30 @@ footer {
   background-color: #25D366;
   color: #fff;
   border-radius: 50%;
-  width: 45px;        /* was 60px */
-  height: 45px;       /* was 60px */
+  width: 65px;        /* mobile default */
+  height: 65px;       /* mobile default */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 22px;    /* was 28px */
+  font-size: 22px;    /* mobile default */
   text-decoration: none;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   z-index: 999;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .whatsapp-float:hover {
   background-color: #20b858;
 }
+
+/* Desktop view */
+@media (min-width: 1024px) {
+  .whatsapp-float {
+    width: 70px;
+    height: 70px;
+    font-size: 24px; /* optional, thoda bada font desktop me */
+  }
+}
+
 
 
