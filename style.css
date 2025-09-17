@@ -817,5 +817,16 @@ footer {
 }
 
 
+/* Scroll animation: fade in + slide up */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
