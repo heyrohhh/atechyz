@@ -35,28 +35,31 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   //contact page
-   const popup = document.getElementById('popupMsg');
+  const popup = document.getElementById('popupMsg');
 
 document.getElementById('contactForm').addEventListener('submit', async (e) => {
   e.preventDefault();
+
   const formData = new FormData(e.target);
   const data = Object.fromEntries(formData);
 
   try {
-    const res = await fetch('http://localhost:5000/send', {
+    const res = await fetch('https://atechyz-it-and-support-services.onrender.com/send', {
       method: 'POST',
-      headers: {'Content-Type': 'application/json'},
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
     });
 
     const result = await res.json();
+
     if (res.ok) {
       e.target.reset();
-      showPopup(result.message, 'success');
+      showPopup(result.message || 'Message sent successfully!', 'success');
     } else {
-      showPopup(result.message, 'error');
+      showPopup(result.message || 'Failed to send message.', 'error');
     }
   } catch (err) {
+    console.error(err);
     showPopup('Failed to send message.', 'error');
   }
 });
