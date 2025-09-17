@@ -773,8 +773,8 @@ footer {
   background-color: #25D366;
   color: #fff;
   border-radius: 50%;
-  width: 2cm; /* Approximately 4cm, converts to ~151px at 96dpi */
-  height: 2cm;
+  width: 40px; /* Approximately 4cm, converts to ~151px at 96dpi */
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
