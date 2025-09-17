@@ -554,7 +554,16 @@ form ke liye hai sey content section ka */
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 /* Card container for image + form */
 #contact .contact-card {
   background: #1f1f1f;
