@@ -4,6 +4,22 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
+.whatsapp-float {
+  width: 70px;       /* mobile */
+  height: 70px;
+  font-size: 28px;   /* ye chhota lag raha hai */
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+  .whatsapp-float {
+    width: 102px;
+    height: 102px;
+    font-size: 34px; /* icon thoda bada */
+  }
+}
+
 nav ul li a {
   color: inherit;            /* text color same rakhe jo parent ka hai */
   text-decoration: none;     /* underline hata de */
