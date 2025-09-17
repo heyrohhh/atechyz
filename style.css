@@ -792,8 +792,8 @@ footer {
 /* Desktop view */
 @media (min-width: 1024px) {
   .whatsapp-float {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     font-size: 24px; /* optional, thoda bada font desktop me */
   }
 }
