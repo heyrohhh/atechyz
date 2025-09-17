@@ -773,38 +773,20 @@ footer {
   background-color: #25D366;
   color: #fff;
   border-radius: 50%;
-  width: 70px;        
-  height: 70px;       
+  width: 70px;        /* mobile default */
+  height: 70px;       /* mobile default */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 28px;    
+  font-size: 28px;    /* mobile default */
   text-decoration: none;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   z-index: 999;
   transition: all 0.3s ease;
-  cursor: pointer;
-
-  /* Bounce animation */
-  animation: bounce 2s infinite;
 }
 
 .whatsapp-float:hover {
   background-color: #20b858;
-  transform: scale(1.1); /* slight pop on hover */
-}
-
-/* Bounce keyframes */
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
 }
 
 /* Desktop view */
@@ -812,9 +794,10 @@ footer {
   .whatsapp-float {
     width: 102px;
     height: 102px;
-    font-size: 34px; 
+    font-size: 34px; /* optional, desktop me thoda bada */
   }
 }
+
 
 /* Scroll animation: fade in + slide up */
 .scroll-animate {
