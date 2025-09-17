@@ -782,10 +782,12 @@ footer {
   text-decoration: none;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   z-index: 999;
+  transition: background-color 0.3s ease;
 }
 
 .whatsapp-float:hover {
   background-color: #20b858;
 }
+
 
 
