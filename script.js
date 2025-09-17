@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   //contact page
-  const popup = document.getElementById('popupMsg');
+ const popup = document.getElementById('popupMsg');
 
 document.getElementById('contactForm').addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -51,15 +51,13 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
     });
 
     const result = await res.json();
-
     if (res.ok) {
       e.target.reset();
-      showPopup(result.message || 'Message sent successfully!', 'success');
+      showPopup(result.message, 'success');
     } else {
-      showPopup(result.message || 'Failed to send message.', 'error');
+      showPopup(result.message, 'error');
     }
   } catch (err) {
-    console.error(err);
     showPopup('Failed to send message.', 'error');
   }
 });
@@ -72,4 +70,5 @@ function showPopup(message, type) {
     popup.style.display = 'none';
   }, 3000);
 }
+
 
