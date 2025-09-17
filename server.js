@@ -25,7 +25,7 @@ app.post('/send', async (req, res) => {
       from: email,
       to: process.env.EMAIL_USER,
       subject: `New Contact from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+      text: `Name: ${name}\nEmail: ${email}\ncontact${contact}\nMessage: ${message}`
     });
 
     res.json({ message: 'Message sent successfully!' });
