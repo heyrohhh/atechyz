@@ -547,8 +547,7 @@ form ke liye hai sey content section ka */
 }
 
 #contact h1 {
-  position: absolute;
-  top: 30px;
+  position: relative;
   width: 100%;
   text-align: center;
   color: #ff7b00;
